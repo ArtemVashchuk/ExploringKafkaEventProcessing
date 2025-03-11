@@ -1,6 +1,11 @@
-@ExploringKafkaEventProcessing_HostAddress = http://localhost:5160
+@ExploringEventStoreDb_HostAddress = http://localhost:5160
 
-GET {{ExploringKafkaEventProcessing_HostAddress}}/weatherforecast/
+GET {{ExploringEventStoreDb_HostAddress}}/balance
+Accept: application/json
+
+###
+
+POST {{ExploringEventStoreDb_HostAddress}}/deposit?amount=500
 Accept: application/json
 
 ###
