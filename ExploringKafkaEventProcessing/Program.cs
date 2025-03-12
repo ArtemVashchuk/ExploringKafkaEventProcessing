@@ -11,7 +11,8 @@ builder.Services.AddSingleton(_ =>
 });
 
 builder.Services.AddSingleton<EventStoreService>();
-builder.Services.AddHostedService<EventStoreSubscriptionService>();
+builder.Services.AddHostedService<EventStoreToKafkaService>();
+builder.Services.AddHostedService<KafkaEventConsumer>();
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
